@@ -130,3 +130,5 @@ dmypy.json
 
 .ipynb_checkpoints/
 netflix-prize-data/
+/Week5/df_processed.csv
+/Week7/libfm/
