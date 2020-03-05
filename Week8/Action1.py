@@ -12,7 +12,7 @@ print('-'*71)
 print('-'*71)
 print('-'*30 + 'sample数据集' + '-'*30)
 # 数据读取
-data = pd.read_csv('../Week7/movielens_sample.txt')
+data = pd.read_csv('movielens_sample.txt')
 # 稀疏特征与目标
 sparse_features = ['user_id', 'movie_id', 'timestamp', 'gender', 'age', 'occupation', 'zip']
 target = ['rating']
@@ -64,7 +64,7 @@ print('-'*77)
 print('-'*30 + '完整MovieLens数据集' + '-'*30)
 
 # 数据读取
-data = pd.read_csv('../../RS6/L5/MovieLens/ratings.csv')
+data = pd.read_csv('ratings.csv')
 # 稀疏特征与目标
 sparse_features = ['userId', 'movieId', 'timestamp']
 target = ['rating']
