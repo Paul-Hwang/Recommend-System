@@ -1,3 +1,15 @@
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 Thinking1	什么是近似最近邻查找，常用的方法有哪些    
 当处理大规模数据时，精确查找的最近邻查找方法的时间成本太大，近似最近领检索（ANN）可以在牺牲可接受范围内的精度的情况下提高检索效率。ANN通过将相似数据放到同一个bucket，检索时只查找同一个bucket的数据，大幅提升检索效率。    
 常用的ANN方法有：1、局部敏感哈希（LSH) 2、矢量量化（PQ)    
