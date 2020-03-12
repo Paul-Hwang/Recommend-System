@@ -1,15 +1,3 @@
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
-
 Thinking1	什么是近似最近邻查找，常用的方法有哪些    
 当处理大规模数据时，精确查找的最近邻查找方法的时间成本太大，近似最近领检索（ANN）可以在牺牲可接受范围内的精度的情况下提高检索效率。ANN通过将相似数据放到同一个bucket，检索时只查找同一个bucket的数据，大幅提升检索效率。    
 常用的ANN方法有：1、局部敏感哈希（LSH) 2、矢量量化（PQ)    
@@ -25,5 +13,5 @@ Thinking4	为什么YouTube采用期望观看时间作为评估指标
 CTR指标对视频搜索有一定的欺骗性，Youtube的商业模式依靠用户观看时长来投放广告获取收益，用期望观看时间作为评估指标能直观的体现视频收益。    
     
 Thinking5	为什么YouTube在排序阶段没有采用经典的LR（逻辑回归）当作输出层，而是采用了Weighted Logistic Regression？    
-经典的LR只有0，1两种标签，而观看时长则是连续数据，WLR引入观看时间的odds为$ \frac {\sum_{i=1}^{}[T_i}{N - k} $     
+经典的LR只有0，1两种标签，而观看时长则是连续数据，WLR引入观看时间的odds能近似估计期望的观看时长  
     
