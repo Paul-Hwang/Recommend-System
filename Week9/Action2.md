@@ -3,4 +3,4 @@
 1）DNN输入层：将每一类场景数据分别进行embedding，用户画像数据单独embedding，然后将经过embedding的场景数据与用户画像数据合并输入    
 2）DNN隐藏层：塔式三层结构，1024ReLU->512ReLU->256ReLU    
 3）DNN输出层：召回阶段输出分线上和离线训练两部分。离线训练部分输出层为softmax，serving部分用LSH算法取top-K为候选结果。    
-排序阶段的item数量级较小，可以增加更多特征进行精确筛选，模型与召回阶段只有training最后一层不一样，引入观看时间使用Weighted LR，而serving使用e^(Wx+b)作为激励函数。
+排序阶段的item数量级较小，可以增加更多特征进行精确筛选，模型与召回阶段的不同点：training最后一层不一样，引入观看时间使用Weighted LR，而serving使用e^(Wx+b)作为激励函数。
