@@ -34,7 +34,7 @@ List Embedding
 每个车辆详情页面包含一个相似车辆的轮播，推荐与当前车辆相似且可在相同时间段预订的车辆    
 即在list embedding空间中找到k个最近邻（通过计算车辆向量的余弦相似度）    
     
-Type Embedding
+Type Embedding    
 List Embedding仅适合做短期的个性化推荐，用于比较Session内的实时推荐，因此引入Type Embedding对长期行为分析   
 对车辆和用户分别进行聚类，按照聚类后的数据进行type embedding，在更高维度上获取长期兴趣，以此体现实时个性化，并解决冷启动问题    
 计算user type embedding 和list type embedding之间的余弦相似度，把相似度高的list推荐给用户，例如把省油的，便宜的，好评多的车辆推荐给对此类车辆有偏好的用户    
