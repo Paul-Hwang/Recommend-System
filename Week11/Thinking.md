@@ -12,7 +12,7 @@ DIEN模型：使用GRU对用户行为依赖进行建模，在DIN的基础上加�
 DSIN模型：将用户行为分为多个历史会话，使用Self-Attention机制提取用户的Session兴趣向量，然后利用Bi-LSTM对Session之间的交互建模，最后使用Activation Unit自适应学习各种会话兴趣对目标的影响。    
     
 Thinking3	DIN中的Attention机制思想和原理是怎样的    
-Attention机制的思想：在pooling时赋予与目标Ad相关的商品更大的权重，减少与目标Ad不想管的善品的权重。    
+Attention机制的思想：在pooling时赋予与目标Ad相关的商品更大的权重，减少与目标Ad不相关的商品的权重。    
 原理：将候选Ad与历史行为的每个商品发生交互来计算Attention分数。    
     
 Thinking4	DIEN相比于DIN有哪些创新    
